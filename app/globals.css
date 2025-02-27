@@ -1,0 +1,71 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 18, 18, 18;
+  --background-end-rgb: 28, 28, 28;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--background-start-rgb));
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(45deg, #4f46e5, #06b6d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient 8s linear infinite;
+}
+
+@keyframes gradient {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+} 
