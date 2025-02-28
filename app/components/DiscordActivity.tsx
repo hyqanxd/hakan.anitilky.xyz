@@ -146,7 +146,7 @@ export default function DiscordActivity() {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="absolute -inset-3 z-10"
+              className="absolute -inset-3 z-30"
             >
               <Image
                 src={typeof data.decoration === 'string' ? data.decoration : data.decoration.asset}
@@ -163,7 +163,7 @@ export default function DiscordActivity() {
           <motion.div
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
-            className="w-20 h-20 bg-indigo-800/30 rounded-full overflow-hidden relative z-20 shadow-xl"
+            className="w-20 h-20 bg-indigo-800/30 rounded-full overflow-hidden relative z-10 shadow-xl"
             style={{
               boxShadow: data.theme_colors?.[0]
                 ? `0 0 20px rgba(${
